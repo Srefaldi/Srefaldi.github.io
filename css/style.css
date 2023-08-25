@@ -331,72 +331,75 @@ footer {
 /* Responsive */
 @media screen and (max-width: 768px) {
   header.navbar-container {
-    padding-block: 0.5rem; /* Adjust spacing */
+    padding-block: 0.5rem;
   }
 
   header.navbar-container .nav-list ul {
-    gap: 1rem 0.5rem; /* Adjust gap between nav items */
+    gap: 1rem 0.5rem;
   }
 
   header.navbar-container .nav-list li a {
-    font-size: 0.9rem; /* Decrease font size */
-    padding: 0.3rem 1rem; /* Adjust padding */
+    font-size: 0.9rem;
+    padding: 0.3rem 1rem;
   }
 
   main {
-    padding: 1rem; /* Adjust main content padding */
+    padding: 1rem;
   }
 
   main .content {
-    gap: 1rem; /* Adjust gap between content sections */
-    flex-direction: column; /* Stack content vertically */
+    width: 100vw;
+  }
+
+  main .konten {
+    flex-direction: column;
+    width: 100vw;
+    padding: 20px;
   }
 
   main .content .content-image img {
-    min-width: 100%; /* Image width to 100% */
-    width: auto;
-    height: auto;
+    min-width: 100%;
   }
 
   .flex-container {
-    flex-direction: column; /* Stack flex items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 
   .product-item {
-    flex-basis: calc(50% - 10px); /* Adjust product item width */
+    flex-basis: calc(50% - 10px);
   }
 }
 
 /* Mobile Phones */
 @media screen and (max-width: 480px) {
   header.navbar-container {
-    padding-block: 0.3rem; /* Further reduce header padding */
+    padding-block: 0.3rem;
   }
 
   header.navbar-container .logo img {
-    width: 80px; /* Reduce logo size */
+    width: 80px;
   }
 
   header.navbar-container .nav-list ul {
-    gap: 0.5rem; /* Further reduce gap between nav items */
+    gap: 0.5rem;
   }
 
   header.navbar-container .nav-list li a {
-    font-size: 0.8rem; /* Decrease font size further */
-    padding: 0.2rem 1rem; /* Adjust padding */
+    font-size: 0.8rem;
+    padding: 0.2rem 1rem;
   }
 
   main {
-    padding: 0.5rem; /* Further reduce main content padding */
+    padding: 0.5rem;
   }
 
   main .content .content-description .title {
-    font-size: 2.5rem; /* Decrease title font size */
+    font-size: 2.5rem;
   }
 
   .product-item {
-    flex-basis: calc(100% - 10px); /* Full width for product items */
+    flex-basis: calc(100% - 10px);
   }
 }
 
@@ -441,9 +444,9 @@ main aside .social-media li a {
 main aside .social-media li a:hover {
   color: #89b0d9;
 }
-/* Menampilkan teks saat ikon disentuh */
+
 main aside .social-media ul li a {
-  position: relative; /* Menjadikan posisi relatif untuk menyelaraskan teks */
+  position: relative;
 }
 
 main aside .social-media ul li a::before {
@@ -459,9 +462,9 @@ main aside .social-media ul li a::before {
   color: white;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  pointer-events: none; /* Hindari mempengaruhi elemen saat hover */
+  pointer-events: none;
 }
 
 main aside .social-media ul li a:hover::before {
-  opacity: 1; /* Tampilkan teks saat ikon disentuh */
+  opacity: 1;
 }
