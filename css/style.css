@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header.navbar-container {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  background-color: white;
+
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding-block: 1rem;
+  z-index: 999;
+}
+
+header.navbar-container .logo img {
+  width: 100px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  /* font-size: 1.05rem; */
+  font-size: large;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 5px solid transparent;
+}
+
+li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: #2d4356;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+/* Batas Akhir CSS Header dan Navbar */
+
+/* CSS MAin Content */
+main {
+  padding: 20px;
+
+  display: flex;
+  gap: 1.5rem;
+  max-width: 12000px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+  border-bottom: 5px solid black;
+  display: flex;
+  align-items: center;
+}
+
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+main .content .content-description {
+  flex: 1 1;
+}
+
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .content-description p {
+  text-align: justify;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+main .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #252b48;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+  border: 3px solid #2d3e50;
+  color: #2d3e50;
+  background-color: transparent;
+}
+
+main .content .content-image {
+  flex: 1;
+  display: flex;
+}
+
+main .content .content-image img {
+  margin: auto;
+  min-width: 250px;
+  width: 500px;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* TEst */
+.konten {
+  margin-bottom: 150px; /* Add margin to create space between content and product */
+  flex: auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 1;
+}
+
+h2 {
+  color: #102c57;
+}
+
+h3 {
+  color: #102c57;
+}
+
+footer {
+  padding: 20px;
+  color: #fff;
+  background-color: #102c57;
+}
+
+.profile header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+.tentang {
+  width: 30%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card1 {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
+
+/* List Product */
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-item {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.product-item h2 {
+  margin-top: 0;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: 100px;
+  height: auto;
+}
+/* Profile item */
+.profile-item {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s;
+}
+
+.profile-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #4f709c;
+}
+
+.profile {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.profile th,
+.profile td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile th {
+  text-align: left;
+  width: 40%;
+}
+
+.profile td {
+  text-align: right;
+}
+.profile-item img {
+  margin-bottom: auto;
+  max-width: 50%;
+  height: 100px;
+  height: auto;
+}
+.title {
+  display: inline-block;
+  color: #102c57;
+}
+
+.word {
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.profile header {
+  text-align: center;
+}
+.kartu {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    padding-block: 0.5rem; /* Adjust spacing */
+  }
+
+  header.navbar-container .nav-list ul {
+    gap: 1rem 0.5rem; /* Adjust gap between nav items */
+  }
+
+  header.navbar-container .nav-list li a {
+    font-size: 0.9rem; /* Decrease font size */
+    padding: 0.3rem 1rem; /* Adjust padding */
+  }
+
+  main {
+    padding: 1rem; /* Adjust main content padding */
+  }
+
+  main .content {
+    gap: 1rem; /* Adjust gap between content sections */
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  main .content .content-image img {
+    min-width: 100%; /* Image width to 100% */
+    width: auto;
+    height: auto;
+  }
+
+  .flex-container {
+    flex-direction: column; /* Stack flex items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .product-item {
+    flex-basis: calc(50% - 10px); /* Adjust product item width */
+  }
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 480px) {
+  header.navbar-container {
+    padding-block: 0.3rem; /* Further reduce header padding */
+  }
+
+  header.navbar-container .logo img {
+    width: 80px; /* Reduce logo size */
+  }
+
+  header.navbar-container .nav-list ul {
+    gap: 0.5rem; /* Further reduce gap between nav items */
+  }
+
+  header.navbar-container .nav-list li a {
+    font-size: 0.8rem; /* Decrease font size further */
+    padding: 0.2rem 1rem; /* Adjust padding */
+  }
+
+  main {
+    padding: 0.5rem; /* Further reduce main content padding */
+  }
+
+  main .content .content-description .title {
+    font-size: 2.5rem; /* Decrease title font size */
+  }
+
+  .product-item {
+    flex-basis: calc(100% - 10px); /* Full width for product items */
+  }
+}
+
+/* Reposponsive */
+/* Asside */
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #2d3e50;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color: #89b0d9;
+}
+/* Menampilkan teks saat ikon disentuh */
+main aside .social-media ul li a {
+  position: relative; /* Menjadikan posisi relatif untuk menyelaraskan teks */
+}
+
+main aside .social-media ul li a::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -30px; /* Menyesuaikan posisi teks */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2d3e50;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Hindari mempengaruhi elemen saat hover */
+}
+
+main aside .social-media ul li a:hover::before {
+  opacity: 1; /* Tampilkan teks saat ikon disentuh */
+}
