@@ -406,9 +406,11 @@ footer {
 /* Reposponsive */
 /* Asside */
 main aside {
-  position: fixed;
-  inset-block: 0;
-  inset-inline-end: 0;
+  margin-top: 20px; /* Add some space between "Team Fal Shoes" and the aside */
+  padding: 20px; /* Adjust the padding as needed */
+  background-color: #f2f2f2; /* Add a background color to visually separate it */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
 main aside .social-media {
