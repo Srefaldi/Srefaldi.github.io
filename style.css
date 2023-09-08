@@ -1,0 +1,706 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Css Navbar */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header.navbar-container {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding-block: 0.1rem;
+  z-index: 999;
+}
+
+header.navbar-container .logo img {
+  width: 100px;
+  height: 50px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  /* font-size: 1.05rem; */
+  font-size: large;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 5px solid transparent;
+}
+
+li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: #252b48;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+/* Css Card */
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #252b48;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+/* CSS Home Main */
+.content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+/* CSS HOme */
+.konten {
+  margin-bottom: 150px;
+  flex: auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.home .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.home .content .content-description {
+  flex: 1 1;
+}
+
+.home .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+  color: #252b48;
+}
+
+.home .content .content-description p {
+  text-align: justify;
+  margin-top: 50px;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+.home .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #252b48;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.home .content .content-description button:hover {
+  border: 3px solid #2d3e50;
+  color: #2d3e50;
+  background-color: transparent;
+}
+
+.home .content .content-image {
+  flex: 1;
+  display: flex;
+}
+.home .content .content-image img {
+  margin: auto;
+  min-width: 250px;
+  width: 400px;
+}
+/* CSS for button layout inside card */
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.5rem; /* Ukuran ikon sesuaikan dengan kebutuhan Anda */
+  color: #333; /* Warna ikon sesuaikan dengan kebutuhan Anda */
+}
+
+.close-button:hover {
+  color: red; /* Warna saat hover sesuaikan dengan kebutuhan Anda */
+}
+
+.card-body .action {
+  display: flex;
+  gap: 5px;
+}
+
+.home {
+  padding: 20px;
+  flex-direction: column;
+  display: flex;
+  gap: 1.5rem;
+  max-width: 12000px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  /* flex: 1; */ /* Hapus baris ini */
+  height: 80vh; /* Tambahkan properti ini */
+  /* border-bottom: 2px solid black; */
+  display: flex;
+  align-items: center;
+}
+
+/* start search section */
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.search_section > h2 {
+  color: #252b48;
+}
+
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: flex;
+  align-items: center;
+}
+
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button {
+  background-color: #252b48;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1115px) {
+  .search_section {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .search_section {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .search_section > form > .search {
+    width: 65%;
+  }
+
+  .search_section > form > .add {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .search_section > form {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .search_section > form > .search {
+    width: 100%;
+  }
+
+  .search_section > form > .search > input {
+    padding-left: 70px;
+  }
+
+  .search_section > form > .add {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .search_section > form > .add > button > i {
+    font-size: 16px;
+  }
+
+  .search_section > form > .add > button > span {
+    padding-right: 30px;
+  }
+}
+
+.center-icon {
+  justify-content: center;
+}
+
+/* end search section */
+
+/* start overlay add book */
+#formBook {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 16px;
+  border: 2px solid rgb(223, 220, 220);
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 1px rgba(68, 76, 247, 0.3);
+}
+
+.input_section > .title-input {
+  position: relative;
+}
+
+.input_section > .title-input > #close {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  border: none;
+  outline: none;
+  font-size: 35px;
+  color: #252b48;
+  cursor: pointer;
+}
+
+.input_section > .title-input > .close:hover {
+  color: #252b48;
+  transition: 0.5s;
+}
+
+.input_section > .title-input > h2 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 10px auto 15px;
+}
+
+.input_section > form {
+  margin-bottom: 15px;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 95%;
+  height: 60px;
+  margin: 20px auto;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(223, 220, 220);
+  border-radius: 15px;
+  padding: 0 20px;
+}
+
+.input_section > form > .input > input:focus {
+  outline: none;
+  border-color: rgba(68, 76, 247, 0.3);
+  box-shadow: 0 0 5px rgba(68, 76, 247, 0.3);
+  transition: 0.6s;
+}
+
+.input_section > form > .input_inline {
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > input {
+  margin-left: 5px;
+}
+
+.input_section > form > .input_inline > label {
+  color: #252b48;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.input_section > form > button {
+  background-color: white;
+  color: white;
+  border: 1.5px solid #252b48;
+  color: #252b48;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.input_section > form > button:hover {
+  color: white;
+  background-color: #252b48;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 1115px) {
+  .input_section {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .input_section {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .input_section {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .input_section > .title-input > h2 {
+    margin: 30px auto 15px;
+  }
+
+  .input_section > .title-input > #close {
+    position: absolute;
+    top: -15px;
+    right: 100px;
+  }
+}
+
+/* end overlay add book */
+
+/* start show bookshelf */
+section > .showBook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  border: 2px solid rgb(223, 220, 220);
+  border-radius: 20px;
+  background-color: white;
+  padding: 16px;
+}
+
+.book_shelf > h2 {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.book_shelf > .book_list {
+  width: 100%;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.book_shelf > .book_list > .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 40px 50px;
+  width: 200px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #8aabca;
+}
+
+.book_shelf > .book_list > .card > .card-img {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+}
+
+.book_shelf > .book_list > .card > .card-img > img {
+  max-height: 99%;
+  max-width: 99%;
+}
+
+.book_shelf > .book_list > .card > .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 15px 15px;
+  width: 100%;
+}
+
+.book_shelf > .book_list > .card > .card-body > .content > h3,
+p {
+  margin-bottom: 3px;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px auto;
+  align-items: center;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 15px;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .done {
+  border: 1px solid #19b82b;
+  border-radius: 10px;
+  color: #19b82b;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .done:hover {
+  background-color: #19b82b;
+  color: #252b48;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .edit {
+  border: 1px solid #252b48;
+  border-radius: 10px;
+  color: #252b48;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .edit:hover {
+  background-color: #252b48;
+  color: white;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .undo {
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  color: #ffc107;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .undo:hover {
+  background-color: #ffc107;
+  color: white;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .delete {
+  border: 1px solid #db2828;
+  border-radius: 10px;
+  color: #db2828;
+}
+
+.book_shelf > .book_list > .card > .card-body > .action > .delete:hover {
+  background-color: #db2828;
+  color: white;
+}
+
+@media only screen and (max-width: 1115px) {
+  /* styles for browsers max 115px; */
+  .showBook {
+    width: 80%;
+    margin: auto;
+  }
+
+  .book_shelf > .book_list > .card {
+    margin: 0px 20px 50px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .showBook {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .book_shelf {
+    width: 100%;
+  }
+
+  .book_shelf > .book_list {
+    justify-content: center;
+  }
+
+  .book_shelf > .book_list > .card {
+    margin: 0px 40px 50px;
+  }
+}
+
+/* end show bookshelf */
+
+/* start footer */
+.footer {
+  display: flex;
+  width: 960px;
+  font-family: monospace;
+  margin: 50px auto 0;
+  line-height: 4;
+  border-top: 1px solid white;
+}
+
+.footer > ul {
+  display: flex;
+  grid-gap: 40px;
+  justify-items: center;
+  margin: auto;
+  list-style: none;
+}
+
+.footer > ul > li > a {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.footer > ul > li > a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 1);
+}
+
+.footer > ul > li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(20deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+@media only screen and (max-width: 1115px) {
+  .footer {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .footer {
+    width: 80%;
+  }
+}
+
+/* end footer */
+footer {
+  padding: 20px;
+  color: #fff;
+  background-color: #252b48;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  header.navbar-container .nav-list {
+    display: none;
+  }
+
+  header.navbar-container .hamburger-menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .book_list > .card {
+    margin: 0 auto 20px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer > ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer > ul > li {
+    margin: 10px 0;
+  }
+}
+.home .content .content-image img {
+  width: 100%;
+  max-width: 400px; /* Sesuaikan dengan kebutuhan Anda */
+  height: auto;
+}
